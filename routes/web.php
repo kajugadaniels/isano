@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Patient\PatientController;
+use App\Http\Controllers\Receptionist\ReceptionistController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,9 +18,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('login');
 });
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::group(['as'=>'admin.','prefix' => 'admin','namespace'=>'Admin','middleware'=>['auth','admin']], function () {
+    Route::get('dashboard', [AdminController::class, 'index'])->name('dashboard');
+});
+
+Route::group(['as'=>'patient.','prefix' => 'patient','namespace'=>'Patient','middleware'=>['auth','patient']], function () {
+    Route::get('dashboard', [PatientController::class, 'index'])->name('dashboard');
+});
+
+Route::group(['as'=>'receptionist.','prefix' => 'receptionist','namespace'=>'Receptionist','middleware'=>['auth','receptionist']], function () {
+    Route::get('dashboard', [ReceptionistController::class, 'index'])->name('dashboard');
+});
