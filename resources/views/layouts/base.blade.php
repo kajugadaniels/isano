@@ -10,29 +10,29 @@
     <meta name="keywords"
         content="admin template, Mofi admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="pixelstrap">
-    <link rel="icon" href="{{ asset('assets/images/favicon.png') }}" type="image/x-icon">
-    <link rel="shortcut icon" href="{{ asset('assets/images/favicon.png') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('images/favicon.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}" type="image/x-icon">
     <title>E-Hospital</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/vendors/icofont.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/vendors/themify.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/vendors/flag-icon.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/vendors/feather-icon.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/vendors/slick.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/vendors/slick-theme.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/vendors/scrollbar.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/vendors/animate.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/vendors/datatables.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/vendors/date-range-picker/flatpickr.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/vendors/bootstrap.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
-    <link id="color" rel="stylesheet" href="{{ asset('assets/css/color-1.css') }}" media="screen">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/responsive.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/vendors/icofont.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/vendors/themify.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/vendors/flag-icon.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/vendors/feather-icon.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/vendors/slick.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/vendors/slick-theme.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/vendors/scrollbar.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/vendors/animate.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/vendors/datatables.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/vendors/date-range-picker/flatpickr.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/vendors/bootstrap.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
+    <link id="color" rel="stylesheet" href="{{ asset('css/color-1.css') }}" media="screen">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/responsive.css') }}">
 </head>
 
 <body>
@@ -48,7 +48,19 @@
     <div class="tap-top"><i data-feather="chevrons-up"></i></div>]\
 
     <div class="page-wrapper compact-wrapper" id="pageWrapper">
-        
+        @include('inc.header')
+
+        <div class="page-body-wrapper">
+            @include('inc.sidebar')
+
+            <div class="page-body">
+                <div class="container-fluid default-dashboard">
+                    @yield('content')
+                </div>
+            </div>
+
+            @include('inc.footer')
+        </div>
     </div>
 
     <script src="{{ asset('js/jquery.min.js') }}"></script>

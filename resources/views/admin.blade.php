@@ -1,23 +1,17 @@
-@extends('layouts.app')
+@extends('layouts.base')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
+    <div class="col-xl-5 col-md-6 proorder-xl-1 proorder-md-1">
+        <div class="card profile-greeting p-0">
+            <div class="card-body">
+                <div class="img-overlay">
+                    <h1>Good day, Lena Miller</h1>
+                    <p>Welcome to the Mofi family! We are delighted that you have visited our dashboard.</p><a class="btn"
+                        href="index.html">Go Premium</a>
                 </div>
             </div>
         </div>
     </div>
-</div>
+
 @endsection

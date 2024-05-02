@@ -30,7 +30,7 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xl-7"><img class="bg-img-cover bg-center" src="{{ asset('images/login/2.jpg') }}"  alt="looginpage"></div>
+            <div class="col-xl-7"><img class="bg-img-cover bg-center" src="{{ asset('images/login/1.jpg') }}"  alt="looginpage"></div>
             <div class="col-xl-5 p-0">
                 <div class="login-card login-dark">
                     <div>
