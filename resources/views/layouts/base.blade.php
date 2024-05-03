@@ -32,7 +32,8 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
     <link id="color" rel="stylesheet" href="{{ asset('css/color-1.css') }}" media="screen">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/responsive.css') }}">
-    @yield('css')
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body>
@@ -45,7 +46,9 @@
         </div>
     </div>
 
-    <div class="tap-top"><i data-feather="chevrons-up"></i></div>]\
+    <div class="tap-top">
+        <i data-feather="chevrons-up"></i>
+    </div>
 
     <div class="page-wrapper compact-wrapper" id="pageWrapper">
         @include('inc.header')
@@ -54,6 +57,8 @@
             @include('inc.sidebar')
 
             <div class="page-body">
+                @include('inc.message')
+
                 @yield('content')
             </div>
 
@@ -96,5 +101,4 @@
     <script src="{{ asset('js/theme-customizer/customizer.js') }}"></script>
     <script>new WOW().init();</script>
 </body>
-
 </html>

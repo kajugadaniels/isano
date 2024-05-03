@@ -99,10 +99,9 @@
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-
                                         <div class="mb-3">
                                             <label class="form-label">Age</label>
-                                            <input class="form-control" type="number" placeholder="Age">
+                                            <input class="form-control" type="number" name="age" placeholder="Age">
                                         </div>
                                     </div>
                                 </div>
@@ -112,8 +111,8 @@
                                             <label class="form-label">Gender</label>
                                             <select class="form-control btn-square" name="gender">
                                                 <option value="0">Select</option>
-                                                <option value="1">Male</option>
-                                                <option value="2">Female</option>
+                                                <option value="male">Male</option>
+                                                <option value="female">Female</option>
                                             </select>
                                         </div>
                                     </div>
@@ -122,11 +121,11 @@
                                             <label class="form-label">Marital Status</label>
                                             <select class="form-control btn-square" name="marital_status">
                                                 <option value="0">Select</option>
-                                                <option value="1">Married</option>
-                                                <option value="2">Single</option>
-                                                <option value="2">Divorced</option>
-                                                <option value="2">Widow</option>
-                                                <option value="2">Widower</option>
+                                                <option value="married">Married</option>
+                                                <option value="single">Single</option>
+                                                <option value="divorced">Divorced</option>
+                                                <option value="widow">Widow</option>
+                                                <option value="widower">Widower</option>
                                             </select>
                                         </div>
                                     </div>
@@ -141,7 +140,7 @@
                                             <label class="form-label">Nationality</label>
                                             <select class="form-control btn-square" name="nationality">
                                                 <option value="0">Select</option>
-                                                <option value="1">Rwanda</option>
+                                                <option value="rwanda">Rwanda</option>
                                             </select>
                                         </div>
                                     </div>
@@ -235,10 +234,10 @@
                                         <label class="form-label">Relationship</label>
                                         <select class="form-control btn-square" name="relationship">
                                             <option value="0">Select</option>
-                                            <option value="1">Partner</option>
-                                            <option value="2">Child</option>
-                                            <option value="2">Parent</option>
-                                            <option value="2">Friend</option>
+                                            <option value="partner">Partner</option>
+                                            <option value="child">Child</option>
+                                            <option value="parent">Parent</option>
+                                            <option value="friend">Friend</option>
                                         </select>
                                     </div>
                                 </div>
