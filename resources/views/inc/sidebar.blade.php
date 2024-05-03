@@ -14,8 +14,11 @@
                 </svg>
             </div>
         </div>
-        <div class="logo-icon-wrapper"><a href="{{ route('admin.dashboard') }}"><img class="img-fluid"
-                    src="{{ asset('images/logo/logo-icon.png') }}" alt=""></a></div>
+        <div class="logo-icon-wrapper">
+            <a href="{{ route('admin.dashboard') }}">
+                <img class="img-fluid" src="{{ asset('images/logo/logo-icon.png') }}" alt="">
+            </a>
+        </div>
         <nav class="sidebar-main">
             <div class="left-arrow" id="left-arrow"><i data-feather="arrow-left"></i></div>
             <div id="sidebar-menu">
@@ -47,6 +50,32 @@
                                 <use href="{{ asset('svg/icon-sprite.svg#fill-home') }}"></use>
                             </svg><span>Dashboard</span>
                         </a>
+                    </li>
+                    <li class="sidebar-list">
+                        <i class="fa fa-thumb-tack"></i>
+                        <a class="sidebar-link sidebar-title" href="javascript:void(0)">
+                            <svg class="stroke-icon">
+                                <use href="{{ asset('svg/icon-sprite.svg#stroke-layout') }}"></use>
+                            </svg>
+                            <svg class="fill-icon">
+                                <use href="{{ asset('svg/icon-sprite.svg#fill-layout') }}"></use>
+                            </svg>
+                            <span>Patient Registration</span>
+                        </a>
+                        <ul class="sidebar-submenu">
+                            <li>
+                                <a href="{{ route('admin.patientRegistration') }}">Patient Registration</a>
+                            </li>
+                            <li>
+                                <a href="#">Patient Search</a>
+                            </li>
+                            <li>
+                                <a href="#">Patient Record Verification</a>
+                            </li>
+                            <li>
+                                <a href="#">Patient Referral</a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </div>

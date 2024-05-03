@@ -2,8 +2,22 @@
 @section('content')
 
 <div class="container-fluid">
-    <div class="py-4">
-        <h2>Patient Registration</h2>
+    <div class="py-2">
+        <div class="card-header card-no-border pb-0">
+            <div class="header-top">
+                <h4 class="f-w-700">Patient Registration</h4>
+                <nav>
+                    <ol class="breadcrumb justify-content-sm-start align-items-center mb-0">
+                        <li class="breadcrumb-item">
+                            <a href="{{ route('admin.patientRegistration') }}">
+                                <i data-feather="file-text"></i>
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item f-w-400">Patient Registration</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
     </div>
     <div class="edit-profile">
         <div class="row">

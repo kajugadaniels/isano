@@ -1,12 +1,23 @@
 @extends('layouts.base')
 @section('content')
 
+
 <div class="container-fluid dashboard-2">
     <div class="col-xl-12 col-md-12 proorder-xl-1 proorder-md-1">
         <div class="card">
             <div class="card-header card-no-border pb-0">
                 <div class="header-top">
-                    <h4>Dashboard</h4>
+                    <h4 class="f-w-700">Dashboard</h4>
+                    <nav>
+                        <ol class="breadcrumb justify-content-sm-start align-items-center mb-0">
+                            <li class="breadcrumb-item">
+                                <a href="{{ route('admin.dashboard') }}">
+                                    <i data-feather="home"></i>
+                                </a>
+                            </li>
+                            <li class="breadcrumb-item f-w-400">Dashboard</li>
+                        </ol>
+                    </nav>
                 </div>
             </div>
             <div class="card-body project-status-col">
@@ -30,7 +41,8 @@
                             <div class="upcoming-box">
                                 <a href="{{ route('admin.patientRegistration') }}">
                                     <div class="upcoming-icon bg-warning">
-                                        <img src="{{ asset('images/dashboard-2/svg-icon/registration-form.png') }}" alt="">
+                                        <img src="{{ asset('images/dashboard-2/svg-icon/registration-form.png') }}"
+                                            alt="">
                                     </div>
                                     <span>
                                         <strong>Patient Registration</strong>
