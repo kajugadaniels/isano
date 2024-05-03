@@ -34,8 +34,10 @@ class ResetPasswordController extends Controller
         if (Auth::check() && Auth::user()->role_id == 1) {
             $this->redirectTo = route("admin.dashboard");
         } elseif (Auth::check() && Auth::user()->role_id == 2) {
-            $this->redirectTo = route("patient.dashboard");
+            $this->redirectTo = route("doctor.dashboard");
         } elseif (Auth::check() && Auth::user()->role_id == 3) {
+            $this->redirectTo = route("patient.dashboard");
+        } elseif (Auth::check() && Auth::user()->role_id == 4) {
             $this->redirectTo = route("receptionist.dashboard");
         }
 

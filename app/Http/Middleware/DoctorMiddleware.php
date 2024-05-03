@@ -4,10 +4,9 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 
-class PatientMiddleware
+class DoctorMiddleware
 {
     /**
      * Handle an incoming request.
@@ -16,9 +15,9 @@ class PatientMiddleware
      * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
-    public function handle(Request $request, Closure $next): Response
+    public function handle(Request $request, Closure $next)
     {
-        if (auth::check() && Auth::user()->role_id == 3) {
+        if (auth::check() && Auth::user()->role_id == 2) {
             return $next($request);
         } else {
             return redirect()->route("login");

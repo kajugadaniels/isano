@@ -20,6 +20,11 @@ class RolesTableSeeder extends Seeder
         ]);
 
         DB::table("roles")->insert([
+            "name" => "Doctor",
+            "slug" => "doctor",
+        ]);
+
+        DB::table("roles")->insert([
             "name" => "Patient",
             "slug" => "patient",
         ]);

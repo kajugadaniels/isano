@@ -23,13 +23,20 @@ class UsersTableSeeder extends Seeder
 
         DB::table("users")->insert([
             "role_id" => "2",
+            "name" => "Doctor",
+            "email" => "doctor@test.com",
+            "password" => bcrypt("123"),
+        ]);
+
+        DB::table("users")->insert([
+            "role_id" => "3",
             "name" => "Patient",
             "email" => "patient@test.com",
             "password" => bcrypt("123"),
         ]);
 
         DB::table("users")->insert([
-            "role_id" => "3",
+            "role_id" => "4",
             "name" => "Receptionist",
             "email" => "receptionist@test.com",
             "password" => bcrypt("123"),

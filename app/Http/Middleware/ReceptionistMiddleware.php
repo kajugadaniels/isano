@@ -18,7 +18,7 @@ class ReceptionistMiddleware
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (auth::check() && Auth::user()->role_id == 3) {
+        if (auth::check() && Auth::user()->role_id == 4) {
             return $next($request);
         } else {
             return redirect()->route("login");
