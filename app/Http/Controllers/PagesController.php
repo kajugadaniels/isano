@@ -30,4 +30,9 @@ class PagesController extends Controller
     {
         return view('pages.patient.create');
     }
+
+    public function patientRegistrationStore()
+    {
+        // 
+    }
 }

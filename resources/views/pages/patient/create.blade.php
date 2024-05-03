@@ -60,7 +60,7 @@
             </div>
         </div>
     </div>
-    <form action="" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('admin.patientRegistrationStore') }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="edit-profile">
             <div class="row">
@@ -89,13 +89,13 @@
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">Names</label>
-                                    <input class="form-control" type="text" placeholder="Names">
+                                    <input class="form-control" type="text" name="name" placeholder="Names">
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="mb-3">
                                             <label class="form-label">DOB</label>
-                                            <input class="form-control" type="date">
+                                            <input class="form-control" name="dob" type="date">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -110,7 +110,7 @@
                                     <div class="col-md-6">
                                         <div class="mb-3">
                                             <label class="form-label">Gender</label>
-                                            <select class="form-control btn-square">
+                                            <select class="form-control btn-square" name="gender">
                                                 <option value="0">Select</option>
                                                 <option value="1">Male</option>
                                                 <option value="2">Female</option>
@@ -119,8 +119,8 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="mb-3">
-                                            <label class="form-label">Maritial Status</label>
-                                            <select class="form-control btn-square">
+                                            <label class="form-label">Marital Status</label>
+                                            <select class="form-control btn-square" name="marital_status">
                                                 <option value="0">Select</option>
                                                 <option value="1">Married</option>
                                                 <option value="2">Single</option>
@@ -133,13 +133,13 @@
                                 </div>
                                 <div class="mb-3">
                                     <label class="form-label">Occupation</label>
-                                    <input class="form-control" type="text" placeholder="Occuption">
+                                    <input class="form-control" type="text" name="occupation" placeholder="Occupation">
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="mb-3">
                                             <label class="form-label">Nationality</label>
-                                            <select class="form-control btn-square">
+                                            <select class="form-control btn-square" name="nationality">
                                                 <option value="0">Select</option>
                                                 <option value="1">Rwanda</option>
                                             </select>
@@ -148,7 +148,7 @@
                                     <div class="col-md-6">
                                         <div class="mb-3">
                                             <label class="form-label">ID Number</label>
-                                            <input class="form-control" type="number" placeholder="ID Number">
+                                            <input class="form-control" type="number" name="id_number" placeholder="ID Number">
                                         </div>
                                     </div>
                                 </div>
@@ -174,37 +174,31 @@
                                 <div class="col-md-4">
                                     <div class="mb-3">
                                         <label class="form-label">Address</label>
-                                        <input class="form-control" type="text" placeholder="Address">
+                                        <input class="form-control" type="text" name="address" placeholder="Address">
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-md-4">
                                     <div class="mb-3">
                                         <label class="form-label">City</label>
-                                        <input class="form-control" type="text" placeholder="City">
-                                    </div>
-                                </div>
-                                <div class="col-sm-6 col-md-4">
-                                    <div class="mb-3">
-                                        <label class="form-label">Country</label>
-                                        <input class="form-control" type="email" placeholder="Country">
+                                        <input class="form-control" type="text" name="city" placeholder="City">
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-md-4">
                                     <div class="mb-3">
                                         <label class="form-label">Postal Code</label>
-                                        <input class="form-control" type="text" placeholder="Postal Code">
+                                        <input class="form-control" type="text" name="postal_code" placeholder="Postal Code">
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-md-4">
                                     <div class="mb-3">
                                         <label class="form-label">Mobile Number</label>
-                                        <input class="form-control" type="text" placeholder="Mobile Number">
+                                        <input class="form-control" type="text" name="mobile_number_1" placeholder="Mobile Number">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="mb-3">
                                         <label class="form-label">Mobile Number 2</label>
-                                        <input class="form-control" type="text" placeholder="Mobile Number 2">
+                                        <input class="form-control" type="text" name="mobile_number_2" placeholder="Mobile Number 2">
                                     </div>
                                 </div>
                             </div>
@@ -227,19 +221,19 @@
                                 <div class="col-md-4">
                                     <div class="mb-3">
                                         <label class="form-label">Relative Name</label>
-                                        <input class="form-control" type="text" placeholder="Relative Name">
+                                        <input class="form-control" type="text" name="relative_name" placeholder="Relative Name">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="mb-3">
                                         <label class="form-label">Relative ID Number</label>
-                                        <input class="form-control" type="text" placeholder="Relative ID Number">
+                                        <input class="form-control" type="text" name="relative_id_number" placeholder="Relative ID Number">
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-md-4">
                                     <div class="mb-3">
                                         <label class="form-label">Relationship</label>
-                                        <select class="form-control btn-square">
+                                        <select class="form-control btn-square" name="relationship">
                                             <option value="0">Select</option>
                                             <option value="1">Partner</option>
                                             <option value="2">Child</option>
@@ -251,19 +245,19 @@
                                 <div class="col-sm-6 col-md-4">
                                     <div class="mb-3">
                                         <label class="form-label">Address</label>
-                                        <input class="form-control" type="email" placeholder="Address">
+                                        <input class="form-control" type="text" name="relative_address" placeholder="Address">
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-md-4">
                                     <div class="mb-3">
                                         <label class="form-label">Mobile Number</label>
-                                        <input class="form-control" type="text" placeholder="Mobile Number">
+                                        <input class="form-control" type="text" name="relative_mobile_number_1" placeholder="Mobile Number">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="mb-3">
                                         <label class="form-label">Mobile Number 2</label>
-                                        <input class="form-control" type="text" placeholder="Mobile Number 2">
+                                        <input class="form-control" type="text" name="relative_mobile_number_2" placeholder="Mobile Number 2">
                                     </div>
                                 </div>
                             </div>

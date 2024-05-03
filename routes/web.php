@@ -23,7 +23,8 @@ Auth::routes();
 
 Route::group(['as'=>'admin.','prefix' => 'admin','namespace'=>'Admin','middleware'=>['auth','admin']], function () {
     Route::get('dashboard', [PagesController::class, 'adminDashboard'])->name('dashboard');
-    Route::get('patient-register', [PagesController::class, 'patientRegistration'])->name('patientRegistration');
+    Route::get('patient-reg', [PagesController::class, 'patientRegistration'])->name('patientRegistration');
+    Route::post('patient-reg', [PagesController::class, 'patientRegistrationStore'])->name('patientRegistrationStore');
 });
 
 Route::group(['as'=>'doctor.','prefix' => 'doctor','namespace'=>'doctor','middleware'=>['auth','doctor']], function () {
