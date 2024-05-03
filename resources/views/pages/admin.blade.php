@@ -28,7 +28,7 @@
                     <div class="col-1">
                         <div class="btn-light1-warning b-r-10">
                             <div class="upcoming-box">
-                                <a href="#">
+                                <a href="{{ route('admin.patientRegistration') }}">
                                     <div class="upcoming-icon bg-warning">
                                         <img src="{{ asset('images/dashboard-2/svg-icon/registration-form.png') }}" alt="">
                                     </div>

@@ -25,6 +25,7 @@ Auth::routes();
 
 Route::group(['as'=>'admin.','prefix' => 'admin','namespace'=>'Admin','middleware'=>['auth','admin']], function () {
     Route::get('dashboard', [AdminController::class, 'index'])->name('dashboard');
+    Route::get('patient-register', [AdminController::class, 'patientRegistration'])->name('patientRegistration');
 });
 
 Route::group(['as'=>'patient.','prefix' => 'patient','namespace'=>'Patient','middleware'=>['auth','patient']], function () {
