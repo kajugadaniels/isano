@@ -36,6 +36,7 @@ class PagesController extends Controller
     public function patientRegistrationStore(Request $request)
     {
         $validator = Validator::make($request->all(), [
+            'mrn' => '',
             'name' => '',
             'dob' => '',
             'age' => '',
