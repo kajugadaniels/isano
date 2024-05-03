@@ -1,14 +1,16 @@
 <div class="sidebar-wrapper" data-layout="stroke-svg">
     <div>
-        <div class="logo-wrapper"><a href="{{ route('admin.dashboard') }}"><img class="img-fluid"
-                    src="{{ asset('images/logo/logo_light.png') }}" alt=""></a>
+        <div class="logo-wrapper">
+            <a href="{{ route('admin.dashboard') }}">
+                <img class="img-fluid" src="{{ asset('images/logo/logo_light.png') }}" alt="">
+            </a>
             <div class="back-btn"><i class="fa fa-angle-left"></i></div>
             <div class="toggle-sidebar">
                 <svg class="stroke-icon sidebar-toggle status_toggle middle">
-                    <use href="svg/icon-sprite.svg#toggle-icon"></use>
+                    <use href="{{ asset('svg/icon-sprite.svg#toggle-icon') }}"></use>
                 </svg>
                 <svg class="fill-icon sidebar-toggle status_toggle middle">
-                    <use href="svg/icon-sprite.svg#fill-toggle-icon"></use>
+                    <use href="{{ asset('svg/icon-sprite.svg#fill-toggle-icon') }}"></use>
                 </svg>
             </div>
         </div>
@@ -37,7 +39,7 @@
                     </li>
                     <li class="sidebar-list">
                         <i class="fa fa-thumb-tack"></i>
-                        <a class="sidebar-link sidebar-title link-nav" href="{{ asset('admin.dashboard') }}">
+                        <a class="sidebar-link sidebar-title link-nav" href="{{ route('admin.dashboard') }}">
                             <svg class="stroke-icon">
                                 <use href="{{ asset('svg/icon-sprite.svg#stroke-home') }}"></use>
                             </svg>

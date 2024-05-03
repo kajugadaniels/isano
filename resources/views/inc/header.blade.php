@@ -23,18 +23,22 @@
                 <div class="form-group w-100">
                     <div class="Typeahead Typeahead--twitterUsers">
                         <div class="u-posRelative">
-                            <input class="demo-input Typeahead-input form-control-plaintext w-100" type="text"
-                                placeholder="Search Mofi .." name="q" title="" autofocus>
-                            <div class="spinner-border Typeahead-spinner" role="status"><span
-                                    class="sr-only">Loading...</span></div><i class="close-search" data-feather="x"></i>
+                            <input class="demo-input Typeahead-input form-control-plaintext w-100" type="text" placeholder="Search Mofi .." name="q" title="" autofocus>
+                            <div class="spinner-border Typeahead-spinner" role="status">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            <i class="close-search" data-feather="x"></i>
                         </div>
                         <div class="Typeahead-menu"></div>
                     </div>
                 </div>
             </form>
             <div class="header-logo-wrapper col-auto p-0">
-                <div class="logo-wrapper"><a href="{{ route('admin.dashboard') }}"><img class="img-fluid"
-                            src="{{ asset('images/logo/logo.png') }}" alt=""></a></div>
+                <div class="logo-wrapper">
+                    <a href="{{ route('admin.dashboard') }}">
+                        <img class="img-fluid" src="{{ asset('images/logo/logo.png') }}" alt="">
+                    </a>
+                </div>
                 <div class="toggle-sidebar">
                     <svg class="stroke-icon sidebar-toggle status_toggle middle">
                         <use href="{{ asset('svg/icon-sprite.svg#toggle-icon') }}"></use>
@@ -57,26 +61,29 @@
                                     <svg class="search-bg svg-color">
                                         <use href="{{ asset('svg/icon-sprite.svg#search') }}"></use>
                                     </svg>
-                                    <input class="demo-input py-0 Typeahead-input form-control-plaintext w-100"
-                                        type="text" placeholder="Search...." name="q" title="">
+                                    <input class="demo-input py-0 Typeahead-input form-control-plaintext w-100" type="text" placeholder="Search...." name="q" title="">
                                 </div>
                             </div>
                         </div>
                     </li>
                     <li class="profile-nav onhover-dropdown px-0 py-0">
-                        <div class="d-flex profile-media align-items-center"><img class="img-30"
-                                src="{{ asset('images/dashboard/profile.png') }}" alt="">
-                            <div class="flex-grow-1"><span>Alen Miller</span>
-                                <p class="mb-0 font-outfit">UI Designer<i class="fa fa-angle-down"></i></p>
+                        <div class="d-flex profile-media align-items-center">
+                            <img class="img-30" src="{{ asset('images/dashboard/profile.png') }}" alt="">
+                            <div class="flex-grow-1"><span>{{ Auth::user()->name }}</span>
                             </div>
                         </div>
                         <ul class="profile-dropdown onhover-show-div">
-                            <li><a href="private-chat.html"><i data-feather="user"></i><span>Account </span></a></li>
-                            <li><a href="letter-box.html"><i data-feather="mail"></i><span>Inbox</span></a></li>
-                            <li><a href="task.html"><i data-feather="file-text"></i><span>Taskboard</span></a></li>
-                            <li><a href="edit-profile.html"><i data-feather="settings"></i><span>Settings</span></a>
+                            <li><a href="#"><i data-feather="user"></i><span>Account </span></a></li>
+                            <li>
+                                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                    <i data-feather="log-out"></i>
+                                    <span>Log out</span>
+                                </a>
                             </li>
-                            <li><a href="login.html"><i data-feather="log-in"> </i><span>Log in</span></a></li>
+
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
                         </ul>
                     </li>
                 </ul>
