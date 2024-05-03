@@ -22,14 +22,8 @@ class RedirectIfAuthenticated
         $guards = empty($guards) ? [null] : $guards;
 
         foreach ($guards as $guard) {
-            if (Auth::guard($guard)->check() && Auth::user()->role_id == 1) {
-                return redirect()->route("admin.dashboard");
-            } elseif (Auth::guard($guard)->check() && Auth::user()->role_id == 2) {
-                return redirect()->route("doctor.dashboard");
-            } elseif (Auth::guard($guard)->check() && Auth::user()->role_id == 3) {
-                return redirect()->route("patient.dashboard");
-            } elseif (Auth::guard($guard)->check() && Auth::user()->role_id == 4) {
-                return redirect()->route('receptionist.dashboard');
+            if (Auth::guard($guard)->check()) {
+                return redirect(RouteServiceProvider::HOME);
             }
         }
 
