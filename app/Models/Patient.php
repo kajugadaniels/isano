@@ -38,7 +38,7 @@ class Patient extends Model
         parent::boot();
 
         static::creating(function ($patient) {
-            $patient->mrn = 'patient-' . str_pad(rand(1, 999999999), 9, '0', STR_PAD_LEFT); // Generate a unique MRN with 4-digit numbers
+            $patient->mrn = 'PTT-' . str_pad(rand(1, 999999999), 9, '0', STR_PAD_LEFT); // Generate a unique MRN with 4-digit numbers
         });
     }
 }

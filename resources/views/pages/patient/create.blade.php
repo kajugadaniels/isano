@@ -90,6 +90,7 @@
                                 <div class="mb-3">
                                     <label class="form-label">Names</label>
                                     <input class="form-control" type="text" name="name" placeholder="Names">
+                                    {{-- <input class="form-control" type="text" name="name" placeholder="Names" value="{{ old('name') ?? $latestPatient->name ?? '' }}"> --}}
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
@@ -147,7 +148,8 @@
                                     <div class="col-md-6">
                                         <div class="mb-3">
                                             <label class="form-label">ID Number</label>
-                                            <input class="form-control" type="number" name="id_number" placeholder="ID Number">
+                                            <input class="form-control" type="number" name="id_number"
+                                                placeholder="ID Number">
                                         </div>
                                     </div>
                                 </div>
@@ -185,19 +187,22 @@
                                 <div class="col-sm-6 col-md-4">
                                     <div class="mb-3">
                                         <label class="form-label">Postal Code</label>
-                                        <input class="form-control" type="text" name="postal_code" placeholder="Postal Code">
+                                        <input class="form-control" type="text" name="postal_code"
+                                            placeholder="Postal Code">
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-md-4">
                                     <div class="mb-3">
                                         <label class="form-label">Mobile Number</label>
-                                        <input class="form-control" type="text" name="mobile_number_1" placeholder="Mobile Number">
+                                        <input class="form-control" type="text" name="mobile_number_1"
+                                            placeholder="Mobile Number">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="mb-3">
                                         <label class="form-label">Mobile Number 2</label>
-                                        <input class="form-control" type="text" name="mobile_number_2" placeholder="Mobile Number 2">
+                                        <input class="form-control" type="text" name="mobile_number_2"
+                                            placeholder="Mobile Number 2">
                                     </div>
                                 </div>
                             </div>
@@ -220,13 +225,15 @@
                                 <div class="col-md-4">
                                     <div class="mb-3">
                                         <label class="form-label">Relative Name</label>
-                                        <input class="form-control" type="text" name="relative_name" placeholder="Relative Name">
+                                        <input class="form-control" type="text" name="relative_name"
+                                            placeholder="Relative Name">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="mb-3">
                                         <label class="form-label">Relative ID Number</label>
-                                        <input class="form-control" type="text" name="relative_id_number" placeholder="Relative ID Number">
+                                        <input class="form-control" type="text" name="relative_id_number"
+                                            placeholder="Relative ID Number">
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-md-4">
@@ -244,19 +251,22 @@
                                 <div class="col-sm-6 col-md-4">
                                     <div class="mb-3">
                                         <label class="form-label">Address</label>
-                                        <input class="form-control" type="text" name="relative_address" placeholder="Address">
+                                        <input class="form-control" type="text" name="relative_address"
+                                            placeholder="Address">
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-md-4">
                                     <div class="mb-3">
                                         <label class="form-label">Mobile Number</label>
-                                        <input class="form-control" type="text" name="relative_mobile_number_1" placeholder="Mobile Number">
+                                        <input class="form-control" type="text" name="relative_mobile_number_1"
+                                            placeholder="Mobile Number">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="mb-3">
                                         <label class="form-label">Mobile Number 2</label>
-                                        <input class="form-control" type="text" name="relative_mobile_number_2" placeholder="Mobile Number 2">
+                                        <input class="form-control" type="text" name="relative_mobile_number_2"
+                                            placeholder="Mobile Number 2">
                                     </div>
                                 </div>
                             </div>
