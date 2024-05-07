@@ -34,6 +34,8 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/responsive.css') }}">
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    @yield('css')
 </head>
 
 <body>
@@ -100,5 +102,7 @@
     <script src="{{ asset('js/script.js') }}"></script>
     <script src="{{ asset('js/theme-customizer/customizer.js') }}"></script>
     <script>new WOW().init();</script>
+
+    @yield('js')
 </body>
 </html>

@@ -21,6 +21,11 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('admin/dashboard', [PagesController::class, 'adminDashboard'])->name('admin.dashboard');
-Route::get('admin/patient-reg', [PagesController::class, 'patientRegistration'])->name('admin.patientRegistration');
-Route::post('admin/patient-reg', [PagesController::class, 'patientRegistrationStore'])->name('admin.patientRegistrationStore');
+Route::get('dashboard', [PagesController::class, 'dashboard'])->name('admin.dashboard');
+
+Route::get('patient-reg', [PagesController::class, 'patientRegistration'])->name('admin.patientRegistration');
+Route::post('patient-reg', [PagesController::class, 'patientRegistrationStore'])->name('admin.patientRegistrationStore');
+
+Route::get('consultation-form', [PagesController::class, 'consultationForm'])->name('admin.consultationForm');
+
+Route::get('/getPatients', [PagesController::class, 'getPatients'])->name('getPatients');

@@ -30,7 +30,7 @@
                                         <img src="{{ asset('images/dashboard-2/svg-icon/calendar.png') }}" alt="">
                                     </div>
                                     <span>
-                                        <strong>Appointments</strong>
+                                        <strong>Book Appointments</strong>
                                     </span>
                                 </a>
                             </div>
@@ -74,6 +74,20 @@
                                     </div>
                                     <span>
                                         <strong>Billing & Collection</strong>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1">
+                        <div class="btn-light1-info b-r-10">
+                            <div class="upcoming-box">
+                                <a href="{{ route('admin.consultationForm') }}">
+                                    <div class="upcoming-icon bg-info">
+                                        <img src="{{ asset('images/dashboard-2/svg-icon/fp.png') }}" alt="">
+                                    </div>
+                                    <span>
+                                        <strong>Family <br> Planning</strong>
                                     </span>
                                 </a>
                             </div>

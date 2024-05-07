@@ -8,24 +8,9 @@ use Illuminate\Support\Facades\Validator;
 
 class PagesController extends Controller
 {
-    public function adminDashboard()
+    public function dashboard()
     {
-        return view('pages.admin');
-    }
-
-    public function doctorDashboard()
-    {
-        return view('pages.doctor');
-    }
-
-    public function patientDashboard()
-    {
-        return view('pages.patient');
-    }
-
-    public function receptionistDashboard()
-    {
-        return view('pages.receptionist');
+        return view('pages.dashboard');
     }
 
     public function patientRegistration()
@@ -69,5 +54,17 @@ class PagesController extends Controller
 
         // Redirect to a success page or return a success message
         return redirect()->back()->with('success', 'Patient data added successfully!');
+    }
+
+    public function consultationForm()
+    {
+        return view('pages.fp.consultation-form');
+    }
+
+    public function getPatients(Request $request)
+    {
+        $p = Patient::all();
+
+        return response()->json($p);
     }
 }
