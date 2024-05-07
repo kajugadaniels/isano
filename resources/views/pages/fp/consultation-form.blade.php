@@ -1,6 +1,5 @@
 @extends('layouts.base')
 @section('css')
-    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> --}}
 @endsection
 @section('content')
 
@@ -159,9 +158,9 @@
                                 </div>
                                 <div class="col-xxl-9 col-xl-8 box-col-8 position-relative">
                                     <div class="tab-content" id="add-product-pills-tabContent">
-                                        <div class="tab-pane fade show active" id="personal-info" role="tabpanel"
-                                            aria-labelledby="personal-info-tab">
+                                        <div class="tab-pane fade show active" id="personal-info" role="tabpanel" aria-labelledby="personal-info-tab">
                                             <div class="sidebar-body">
+                                                <h5 class="mb-5">Main Information</h5>
                                                 <div class="row">
                                                     <div class="col-md-3">
                                                         <div class="mb-3">
@@ -188,11 +187,13 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <hr>
+                                                <h5 class="mb-5">Patient Information</h5>
                                                 <div class="row">
                                                     <div class="col-md-3">
                                                         <div class="mb-3">
                                                             <label class="form-label">Full Name</label>
-                                                            <input class="form-control" type="text" name="patient_name" placeholder="Full Name">
+                                                            <input class="form-control" type="text" name="patient_name" placeholder="Full Name" id="search_name">
                                                         </div>
                                                     </div>
                                                     <div class="col-sm-6 col-md-3">
@@ -201,7 +202,7 @@
                                                             <input class="form-control" type="text" name="patient_residence" placeholder="Residence">
                                                         </div>
                                                     </div>
-                                                    <div class="col-sm-6 col-md-2">
+                                                    <div class="col-sm-6 col-md-3">
                                                         <div class="mb-3">
                                                             <label class="form-label">Gender</label>
                                                             <select class="form-control btn-square" name="gender">
@@ -211,13 +212,13 @@
                                                             </select>
                                                         </div>
                                                     </div>
-                                                    <div class="col-sm-6 col-md-2">
+                                                    <div class="col-sm-6 col-md-3">
                                                         <div class="mb-3">
                                                             <label class="form-label">Birth Date</label>
                                                             <input class="form-control" name="dob" type="date">
                                                         </div>
                                                     </div>
-                                                    <div class="col-sm-6 col-md-2">
+                                                    <div class="col-sm-6 col-md-4">
                                                         <div class="mb-3">
                                                             <label class="form-label">Marital Status</label>
                                                             <select class="form-control btn-square"
@@ -229,6 +230,25 @@
                                                                 <option value="widow">Widow</option>
                                                                 <option value="widower">Widower</option>
                                                             </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6 col-md-4">
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Education Level</label>
+                                                            <select class="form-control btn-square"
+                                                                name="education_level">
+                                                                <option value="0">Select</option>
+                                                                <option value="nursary">Nursary</option>
+                                                                <option value="primary">Primary</option>
+                                                                <option value="secondary">Secondary</option>
+                                                                <option value="university">University</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Tel of the client or partner</label>
+                                                            <input class="form-control" type="number" name="tel" placeholder="Mobile Number">
                                                         </div>
                                                     </div>
                                                 </div>
@@ -246,7 +266,71 @@
                                         <div class="tab-pane fade" id="family-planning" role="tabpanel"
                                             aria-labelledby="family-planning-tab">
                                             <div class="sidebar-body">
-                                                Second
+                                                <div class="row">
+                                                    <div class="col-md-2">
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Gravidity</label>
+                                                            <input class="form-control" type="text" name="gravidity" placeholder="Gravidity">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6 col-md-2">
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Parity</label>
+                                                            <input class="form-control" type="text" name="parity" placeholder="Parity">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6 col-md-2">
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Children in Life</label>
+                                                            <input class="form-control" type="number" name="children_in_life" placeholder="Children in Life">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6 col-md-2">
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Desired No of Children</label>
+                                                            <input class="form-control" type="number" name="number_of_children" placeholder="Desired number of children">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6 col-md-2">
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Date of Last Delivery</label>
+                                                            <input class="form-control" type="number" name="last_delivery" placeholder="Date of Last Delivery">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6 col-md-2">
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Date of Last Abortion</label>
+                                                            <input class="form-control" type="number" name="last_abortion" placeholder="Date of Last Abortion">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6 col-md-2">
+                                                        <div class="mb-3">
+                                                            <label class="form-label">No of Died Children</label>
+                                                            <input class="form-control" type="number" name="died_children" placeholder="Number of Died Children">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6 col-md-2">
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Birth Spacing</label>
+                                                            <input class="form-control" type="number" name="birth_spacing" placeholder="Birth Spacing">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6 col-md-2">
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Birth Limitation</label>
+                                                            <input class="form-control" type="number" name="birth_limitation" placeholder="Birth Limitation">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-sm-6 col-md-2">
+                                                        <div class="mb-3">
+                                                            <label class="form-label">Desired Method</label>
+                                                            <select class="form-control btn-square" name="desired_method">
+                                                                <option value="0">Select</option>
+                                                                <option value="pills">Pills</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <div class="product-buttons">
                                                     <button class="btn" type="button">
                                                         <div class="d-flex align-items-center gap-sm-2 gap-1">
@@ -383,5 +467,5 @@
 @endsection
 
 @section('js')
-    
+
 @endsection
