@@ -131,10 +131,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="mb-3">
-                                    <label class="form-label">Occupation</label>
-                                    <input class="form-control" type="text" name="occupation" placeholder="Occupation">
-                                </div>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="mb-3">
@@ -174,35 +170,38 @@
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="mb-3">
-                                        <label class="form-label">Address</label>
-                                        <input class="form-control" type="text" name="address" placeholder="Address">
+                                        <label class="form-label">Province</label>
+                                        <input class="form-control" type="text" name="province" placeholder="Province">
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-md-4">
                                     <div class="mb-3">
-                                        <label class="form-label">City</label>
-                                        <input class="form-control" type="text" name="city" placeholder="City">
+                                        <label class="form-label">District</label>
+                                        <input class="form-control" type="text" name="district" placeholder="District">
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-md-4">
                                     <div class="mb-3">
-                                        <label class="form-label">Postal Code</label>
-                                        <input class="form-control" type="text" name="postal_code"
-                                            placeholder="Postal Code">
+                                        <label class="form-label">Sector</label>
+                                        <input class="form-control" type="text" name="sector" placeholder="Sector">
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-md-4">
                                     <div class="mb-3">
-                                        <label class="form-label">Mobile Number</label>
-                                        <input class="form-control" type="text" name="mobile_number_1"
-                                            placeholder="Mobile Number">
+                                        <label class="form-label">Cell</label>
+                                        <input class="form-control" type="text" name="cell" placeholder="Cell">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4">
+                                    <div class="mb-3">
+                                        <label class="form-label">Village</label>
+                                        <input class="form-control" type="text" name="village" placeholder="Village">
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="mb-3">
-                                        <label class="form-label">Mobile Number 2</label>
-                                        <input class="form-control" type="text" name="mobile_number_2"
-                                            placeholder="Mobile Number 2">
+                                        <label class="form-label">Mobile Number</label>
+                                        <input class="form-control" type="text" name="mobile_number" placeholder="Mobile Number">
                                     </div>
                                 </div>
                             </div>
@@ -248,25 +247,50 @@
                                         </select>
                                     </div>
                                 </div>
+                                <h5>
+                                    Address
+
+                                    <div class="checkbox p-0">
+                                        <input id="checkbox1" type="checkbox" class="form-control-checkbox">
+                                        <label class="text-muted" for="checkbox1" style="font-size: 14px">Same address as patient</label>
+                                    </div>
+                                </h5>
+                                <hr>
                                 <div class="col-sm-6 col-md-4">
                                     <div class="mb-3">
-                                        <label class="form-label">Address</label>
-                                        <input class="form-control" type="text" name="relative_address"
-                                            placeholder="Address">
+                                        <label class="form-label">Province</label>
+                                        <input class="form-control" type="text" name="relative_province" placeholder="Province">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4">
+                                    <div class="mb-3">
+                                        <label class="form-label">District</label>
+                                        <input class="form-control" type="text" name="relative_district" placeholder="District">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4">
+                                    <div class="mb-3">
+                                        <label class="form-label">Sector</label>
+                                        <input class="form-control" type="text" name="relative_sector" placeholder="Sector">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4">
+                                    <div class="mb-3">
+                                        <label class="form-label">Cell</label>
+                                        <input class="form-control" type="text" name="relative_cell" placeholder="Cell">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4">
+                                    <div class="mb-3">
+                                        <label class="form-label">Village</label>
+                                        <input class="form-control" type="text" name="relative_village" placeholder="Village">
                                     </div>
                                 </div>
                                 <div class="col-sm-6 col-md-4">
                                     <div class="mb-3">
                                         <label class="form-label">Mobile Number</label>
-                                        <input class="form-control" type="text" name="relative_mobile_number_1"
+                                        <input class="form-control" type="text" name="relative_mobile_number"
                                             placeholder="Mobile Number">
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="mb-3">
-                                        <label class="form-label">Mobile Number 2</label>
-                                        <input class="form-control" type="text" name="relative_mobile_number_2"
-                                            placeholder="Mobile Number 2">
                                     </div>
                                 </div>
                             </div>
